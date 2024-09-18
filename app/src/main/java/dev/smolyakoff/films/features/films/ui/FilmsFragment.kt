@@ -1,47 +1,47 @@
-package dev.smolyakoff.fimls.features.film_detail.ui
+package dev.smolyakoff.films.features.films.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import dev.smolyakoff.fimls.R
+import androidx.navigation.findNavController
+import dev.smolyakoff.films.R
 
-class FilmDetailFragment : Fragment() {
+class FilmsFragment : Fragment() {
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val view = inflater.inflate(R.layout.fragment_film_detail, container, false)
+        val view = inflater.inflate(R.layout.fragment_films, container, false)
         val composeView = view.findViewById<ComposeView>(R.id.compose_view)
 
         composeView.apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 MaterialTheme {
-                    FilmDetailView()
+                    Surface (
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        FilmsView(
+                            onFilmClick = {
+                                findNavController().navigate(R.id.navigate_to_film_detail)
+                            }
+                        )
+                    }
                 }
             }
         }
+
         return view
     }
 
-    companion object {
-
-        @JvmStatic
-        fun newInstance() =
-            FilmDetailFragment().apply {
-                arguments = Bundle().apply {
-                    /**
-                     * Put String(args*)
-                     */
-                }
-            }
-    }
 }

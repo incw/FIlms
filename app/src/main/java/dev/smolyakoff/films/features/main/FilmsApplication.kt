@@ -1,4 +1,4 @@
-package dev.smolyakoff.fimls
+package dev.smolyakoff.films.features.main
 
 import android.app.Application
 
