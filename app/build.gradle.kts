@@ -54,7 +54,7 @@ android {
 dependencies {
 
     implementation(libs.compose.ui)
-    implementation(libs.compose.material)
+    implementation(libs.compose.material3)
     implementation(libs.compose.runtime)
     implementation(libs.compose.activity)
     implementation(libs.compose.graphics)
