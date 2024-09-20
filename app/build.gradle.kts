@@ -4,6 +4,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -52,6 +55,21 @@ android {
 }
 
 dependencies {
+
+    ksp(libs.room.compiler)
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation(libs.retrofit)
+    implementation(libs.gson.converter)
+
+    implementation(libs.koin.core)
+    implementation(libs.koin.viewModel)
+    implementation(libs.koin.android)
+
+    implementation(libs.coil.compose)
 
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)

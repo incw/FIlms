@@ -9,3 +9,7 @@ val LightYellow = Color(0xFFFFC967)
 val DeepBlack = Color(0xFF000000)
 
 val DarkBrown = Color(0xFF232323)
+
+val LightGray = Color(0xFFEFEFEF)
+
+val Gray = Color(0xFF4b4b4b)
