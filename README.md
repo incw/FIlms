@@ -1,1 +1,1 @@
-Тестовое для секвения [Скачать APK](release/app-release.apk)
+Тестовое для секвения [Скачать APK](app/release/app-release.apk)
