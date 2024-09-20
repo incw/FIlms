@@ -1,0 +1,1 @@
+Тестовое для секвения [Скачать APK](release/app-release.apk)
